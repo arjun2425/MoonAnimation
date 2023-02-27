@@ -1,0 +1,32 @@
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Moon Animation
+    </title>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+</head>
+
+<body>
+    <div>
+        <h1>Moon Phases</h1>
+        <h1 id="day"></h1>
+    </div>
+    <div class="container">
+        <div id='circle1'></div>
+        <div id='circle2'></div>
+        <div id='circle3'></div>
+    </div>
+
+    <script>
+        let day = 0;
+        let intervalID = setInterval(changeDay, 100);
+        function changeDay() {
+            day += 1;
+            day %= 30;
+            document.querySelector('#day').innerHTML = `Day ` + day;
+        }
+    </script>
+</body>
+
+</html>
